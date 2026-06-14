@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario seguro CSRF</title>
+</head>
+<body>
+
+  <h2>Actualizar nombre de usuario</h2>
+
+  <form method="POST" action="/actualizar">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="text" name="nombre">
+    <button type="submit">Actualizar</button>
+  </form>
+
+</body>
+</html>
