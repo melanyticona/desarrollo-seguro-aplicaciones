@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body p-5">
+                <h2 class="mb-4">Dashboard Seguro</h2>
+                
+                <div class="alert alert-success" role="alert">
+                    Sesion iniciada correctamente. Usuario: <strong>{{ current_user.username }}</strong>
+                </div>
+
+                <p class="lead">Bienvenido a SecureNotes, tu plataforma segura para almacenar notas financieras.</p>
+
+                <ul class="list-group mb-4">
+                    <li class="list-group-item">
+                        <strong>Usuario:</strong> {{ current_user.username }}
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Estado:</strong> Autenticado
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Seguridad:</strong> Contraseña encriptada con Werkzeug
+                    </li>
+                </ul>
+
+                <a href="/logout" class="btn btn-danger">Cerrar Sesion</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
